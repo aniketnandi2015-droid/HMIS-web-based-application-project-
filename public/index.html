@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="HMIS pharmacy inventory operations dashboard" />
+    <title>HMIS | Pharmacy Operations</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">HMIS · Inventory intelligence</p>
+        <h1>Pharmacy operations, at a glance.</h1>
+        <p class="lede">A working product foundation for stock visibility, expiry-risk triage, and purchase planning.</p>
+      </header>
+      <section class="metrics" aria-label="Today’s inventory metrics">
+        <article><span>Inventory value</span><strong>₹2.48L</strong><small>+4.8% this month</small></article>
+        <article><span>Low-stock items</span><strong id="low-stock-count">0</strong><small>Need replenishment</small></article>
+        <article><span>Expiry risk</span><strong id="expiry-count">0</strong><small>Within 90 days</small></article>
+      </section>
+      <section class="panel">
+        <div class="panel-heading"><div><p class="eyebrow">Inventory watchlist</p><h2>Prioritize today’s decisions</h2></div><button id="restock-button">Create replenishment list</button></div>
+        <div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Batch</th><th>On hand</th><th>Reorder at</th><th>Expiry</th><th>Status</th></tr></thead><tbody id="inventory-rows"></tbody></table></div>
+        <p id="action-message" class="action-message" aria-live="polite"></p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
